@@ -9,6 +9,6 @@
 
   <main> 
     <app-todo-form (add)="create($event)"></app-todo-form>
-    <app-todo-list></app-todo-list>
+    <app-todo-list [todos]="todos"></app-todo-list>
   </main>
 </div>
