@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const cors = require('cors');
+const passport = require('passport-jwt');
 const app = express();
 const router = express.Router();
 const config = require('./config/database');
@@ -35,6 +36,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/', todo);
 app.use('/users', users);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
