@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/users', (req, res, next) => {
-    res.send('USERS');
+/* GET todo listing. */
+router.get('/todo', (req, res, next) => {
+  res.send('TODO');
 });
 
 module.exports = router;
