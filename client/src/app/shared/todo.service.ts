@@ -12,13 +12,13 @@ export class TodoService {
   }
 
   createTodo = (title: string) => {
-    let todo = new Todo(title);
+    const todo = new Todo(title);
 
     this.todos.push(todo);
   }
 
   deleteTodo = (todo: Todo) => {
-    let index = this.todos.indexOf(todo);
+    const index = this.todos.indexOf(todo);
 
     if (index > -1) {
       this.todos.splice(index, 1);
