@@ -33,14 +33,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/', todo);
-app.use('/users', users);
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(passport);
+
+app.use('/', index);
+app.use('/', todo);
+app.use('/users', users);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
