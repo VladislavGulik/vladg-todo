@@ -8,8 +8,8 @@ import { TodosComponent } from './todos.component';
 
 const routes: Routes = [
   { path: '', component: TodosComponent },
-  { path: 'all', component: AllComponent },  
-  { path: 'create', component: CreateComponent },  
+  { path: 'all', component: AllComponent },
+  { path: 'create', component: CreateComponent },
 ];
 
 @NgModule({
