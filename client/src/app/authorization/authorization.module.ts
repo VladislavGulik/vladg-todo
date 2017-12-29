@@ -8,7 +8,6 @@ import { SignupComponent } from './pages/signup/signup.component';
 @NgModule({
   imports: [
     CommonModule,
-    AuthorizationRoutingModule
   ],
   declarations: [SigninComponent, SignupComponent]
 })

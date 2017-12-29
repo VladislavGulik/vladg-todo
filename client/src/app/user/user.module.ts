@@ -7,7 +7,6 @@ import { DetailsComponent } from './pages/details/details.component';
 @NgModule({
   imports: [
     CommonModule,
-    UserRoutingModule
   ],
   declarations: [
     DetailsComponent,
