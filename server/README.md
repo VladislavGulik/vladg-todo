@@ -1,1 +1,0 @@
-This is server-side part of the todo app using nodejs with express framework and mlab db using mongoose for work with. 
