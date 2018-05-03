@@ -8,6 +8,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoService } from './shared/todo.service';
 
+import { HttpModule } from '@angular/http';
+import { DataService } from './data.service';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +21,13 @@ import { TodoService } from './shared/todo.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
   ],
-  providers: [TodoService],
+  providers: [
+    TodoService,
+    DataService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
